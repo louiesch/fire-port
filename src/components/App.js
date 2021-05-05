@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from './Header'
 import SignIn from "./SignIn"
+import ProjectList from './Projects/ProjectList'
 
 function App() {
   return (
@@ -13,6 +14,9 @@ function App() {
           <div className="column2">
             <SignIn />
           </div>
+        </div>
+        <div>
+          {/* <ProjectList/> */}
         </div>
       </div>
     </>
