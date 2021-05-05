@@ -17,9 +17,17 @@ class Control extends React.Component {
   render() {
     return (
       <>
-        <ProjectList />
-        <SkillList />
-        <Bio />
+        <div className="row">
+          <div className="column">
+            <ProjectList />         
+          </div>
+          <div className="column">            
+            <SkillList />
+          </div>
+          <div className="column">
+            <Bio />
+          </div>
+        </div>
       </>
     )
   }
