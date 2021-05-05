@@ -10,7 +10,7 @@ function App() {
           <div className="column">
             <Header />
           </div>
-          <div className="column">
+          <div className="column2">
             <SignIn />
           </div>
         </div>
