@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import ProjectList from './Projects/ProjectList'
+import NewProjectForm from './Projects/NewProjectForm'
 import SkillList from './Skills/SkillList'
 import Bio from './Bio/Bio'
 
@@ -18,9 +19,11 @@ class Control extends React.Component {
       <>
         <ProjectList />
         <SkillList />
-        <BioList />
+        <Bio />
       </>
     )
   }
 
 }
+
+export default Control;

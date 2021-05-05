@@ -1,9 +1,7 @@
 import React from 'react'
 import Header from './Header'
 import SignIn from "./SignIn"
-import ProjectList from './Projects/ProjectList'
-import SkillList from './Skills/SkillList'
-import Bio from './Bio/Bio'
+import Control from "./Control"
 
 function App() {
   return (
@@ -20,13 +18,7 @@ function App() {
         <div>
           <div className="row">
             <div className="column">
-              <ProjectList/>
-            </div>
-            <div className="column">
-              <SkillList/>
-            </div>
-            <div className="column">
-              <Bio/>
+              <Control />
             </div>
           </div>
         </div>
