@@ -2,6 +2,7 @@ import React from 'react'
 import Header from './Header'
 import SignIn from "./SignIn"
 import ProjectList from './Projects/ProjectList'
+import SkillList from './Skills/SkillList'
 
 function App() {
   return (
@@ -16,7 +17,14 @@ function App() {
           </div>
         </div>
         <div>
-          {/* <ProjectList/> */}
+          <div className="row">
+            <div className="column">
+              <ProjectList/>
+            </div>
+            <div className="column">
+              <SkillList/>
+            </div>
+          </div>
         </div>
       </div>
     </>
