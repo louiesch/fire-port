@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import ProjectList from './ProjectList'
-import SkillList from './SkillList'
-import Bio from './Bio'
+import ProjectList from './Projects/ProjectList'
+import SkillList from './Skills/SkillList'
+import Bio from './Bio/Bio'
 
 class Control extends React.Component {
 
