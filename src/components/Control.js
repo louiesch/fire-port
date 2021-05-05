@@ -10,7 +10,8 @@ class Control extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-
+      showProjectForm: false,
+      showSkillForm: false
     }
   }
 
