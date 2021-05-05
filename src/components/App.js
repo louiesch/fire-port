@@ -1,11 +1,19 @@
 import React from 'react'
 import Header from './Header'
+import SignIn from "./SignIn"
 
 function App() {
   return (
     <>
       <div className="app">
-        <Header />
+        <div className="row">
+          <div className="column">
+            <Header />
+          </div>
+          <div className="column">
+            <SignIn />
+          </div>
+        </div>
       </div>
     </>
   );
