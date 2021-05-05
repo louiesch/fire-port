@@ -3,6 +3,7 @@ import Header from './Header'
 import SignIn from "./SignIn"
 import ProjectList from './Projects/ProjectList'
 import SkillList from './Skills/SkillList'
+import Bio from './Bio/Bio'
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
             </div>
             <div className="column">
               <SkillList/>
+            </div>
+            <div className="column">
+              <Bio/>
             </div>
           </div>
         </div>

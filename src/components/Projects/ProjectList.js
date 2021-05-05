@@ -3,7 +3,9 @@ import Project from './Project'
 
 function ProjectList() {
   return (
-    <Project />
+    <div className="component">
+      <Project />
+    </div>
   );
 }
 

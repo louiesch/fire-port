@@ -4,7 +4,9 @@ import Skill from './Skill'
 function SkillList() {
   return (
     <>
-      <Skill />
+      <div className="component">
+        <Skill />
+      </div>
     </>
   );
 }
