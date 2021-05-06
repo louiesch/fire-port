@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import ProjectControl from './Projects/ProjectControl'
-import SkillList from './Skills/SkillList'
+import SkillControl from './Skills/SkillControl'
 import Bio from './Bio/Bio'
 
 class Control extends React.Component {
@@ -22,7 +22,7 @@ class Control extends React.Component {
             <ProjectControl />         
           </div>
           <div className="column">            
-            <SkillList />
+            <SkillControl />
           </div>
           <div className="column">
             <Bio />

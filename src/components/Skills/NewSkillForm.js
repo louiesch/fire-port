@@ -3,7 +3,9 @@ import React from 'react'
 function NewSkillForm() {
   return (
     <>
-      <p>New Skill Form</p>
+      <div className="component">
+        <p>New Skill Form</p>
+      </div>
     </>
   )
 }

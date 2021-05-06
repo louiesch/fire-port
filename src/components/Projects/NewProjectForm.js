@@ -3,7 +3,9 @@ import React from 'react'
 function NewProjectForm() {
   return (
     <>
-      <p>New project form</p>
+      <div className="component">
+        <p>New Project Form</p>
+      </div>
     </>
   );
 }
