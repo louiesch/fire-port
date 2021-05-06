@@ -7,15 +7,18 @@ class SkillControl extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      showSkillForm: false
+      showSkillForm: false,
+      masterSkillList: []
     }
   };
 
-  handleAddingNewSkillToList = () => {
+  handleAddingNewSkillToList = (newSkill) => {
     console.log("hello");
-    // const { dispatch } = this.props;
-    // const action = a.toggleForm();
-    // dispatch(action);
+    const newMasterSkillList = this.state.masterSkillList.concat(newSkill);
+    this.setState({
+      masterSkillList: newMasterSkillList,
+      showSkillForm: false
+    })
   }
 
   handleClick = () => {
@@ -39,12 +42,16 @@ class SkillControl extends React.Component {
 
     if (this.state.showSkillForm) {
       currentlyVisibleState = 
-      <NewSkillForm onNewSkillCreation={this.handleAddingNewSkillToList} />;
+      <NewSkillForm
+        onNewSkillCreation={this.handleAddingNewSkillToList}
+      />;
       buttonText = "Home";
     }
     else {
       currentlyVisibleState = 
-      <SkillList />;
+      <SkillList
+        skillList={this.state.masterSkillList}
+      />;
       buttonText = "Add Skill";
     }
 

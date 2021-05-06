@@ -1,14 +1,23 @@
 import React from 'react'
 import Skill from './Skill'
+import PropTypes from 'prop-types'
 
-function SkillList() {
+function SkillList(props) {
   return (
     <>
       <div className="component">
-        <Skill />
+        {props.skillList.map((skill, index) =>
+          <Skill
+            name={skill.name}
+          />
+        )}
       </div>
     </>
   );
+}
+
+SkillList.propTypes = {
+  skillList: PropTypes.array
 }
 
 export default SkillList;
