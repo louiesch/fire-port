@@ -1,5 +1,6 @@
 import React from 'react'
-import NewProjectForm from './NewProjectForm';
+import PropTypes from 'prop-types'
+import NewProjectForm from './NewProjectForm'
 import ProjectList from './ProjectList'
 
 class ProjectControl extends React.Component {
@@ -7,7 +8,14 @@ class ProjectControl extends React.Component {
     super(props);
     this.state = {
       showProjectForm: false
-    };
+    }
+  };
+
+  handleAddingNewProjectToList = () => {
+    console.log("hello");
+    // const { dispatch } = this.props;
+    // const action = a.toggleForm();
+    // dispatch(action);
   }
 
   handleClick = () => {
@@ -17,44 +25,42 @@ class ProjectControl extends React.Component {
         selectedProject: null,
         editing: false
       });
-    } else {
+    }
+    else {
       this.setState(prevState => ({
         showProjectForm: !prevState.showProjectForm
       }));
     }
   }
 
-
   render() {
     let currentlyVisibleState = null;
     let buttonText = null;
 
     if (this.state.showProjectForm) {
-      currentlyVisibleState =
-        <NewProjectForm />;
-          // onNewProjectCreation={this.handleAddingNewProjectToList}
-        buttonText = "Home";
-    } else {
-      currentlyVisibleState =
-        <ProjectList />
-          // projectList={this.props.mainProjectList}
-          // onProjectSelection={this.handleChangingSelectedProject} />;
-        buttonText = "Add Project"
+      currentlyVisibleState = 
+      <NewProjectForm onNewProjectCreation={this.handleAddingNewProjectToList} />;
+      buttonText = "Home";
     }
-
+    else {
+      currentlyVisibleState = 
+      <ProjectList />;
+      buttonText = "Add Project";
+    }
 
     return (
       <>
-        <div className="row">
-          <div className="column">
-            {currentlyVisibleState}
-            <button onClick={this.handleClick}>{buttonText}</button>
-          </div>
+      <div className="row">
+        <div className="column">
+          {currentlyVisibleState}
+          <button onClick={this.handleClick}>{buttonText}</button>
         </div>
+      </div>
       </>
     )
   }
-
 }
+
+
 
 export default ProjectControl;

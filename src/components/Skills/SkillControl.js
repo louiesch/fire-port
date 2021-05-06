@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import NewSkillForm from './NewSkillForm'
 import SkillList from './SkillList'
 
@@ -9,6 +10,13 @@ class SkillControl extends React.Component {
       showSkillForm: false
     }
   };
+
+  handleAddingNewSkillToList = () => {
+    console.log("hello");
+    // const { dispatch } = this.props;
+    // const action = a.toggleForm();
+    // dispatch(action);
+  }
 
   handleClick = () => {
     if (this.state.selectedSkill != null) {
@@ -31,7 +39,7 @@ class SkillControl extends React.Component {
 
     if (this.state.showSkillForm) {
       currentlyVisibleState = 
-      <NewSkillForm />;
+      <NewSkillForm onNewSkillCreation={this.handleAddingNewSkillToList} />;
       buttonText = "Home";
     }
     else {
@@ -52,5 +60,7 @@ class SkillControl extends React.Component {
     )
   }
 }
+
+
 
 export default SkillControl;
