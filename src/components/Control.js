@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import ProjectList from './Projects/ProjectList'
-import NewProjectForm from './Projects/NewProjectForm'
+import ProjectControl from './Projects/ProjectControl'
 import SkillList from './Skills/SkillList'
 import Bio from './Bio/Bio'
 
@@ -20,7 +19,7 @@ class Control extends React.Component {
       <>
         <div className="row">
           <div className="column">
-            <ProjectList />         
+            <ProjectControl />         
           </div>
           <div className="column">            
             <SkillList />
